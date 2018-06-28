@@ -84,13 +84,23 @@ main h3 {
   position: absolute;
   left: 45px;
   top: 65px;
-}
-
-.apagado {
   opacity: 0.33;
 }
 
 .clicado {
-  opacity: 0.33;
-  transition: opacity 2s ease-out;  
+  /*opacity: 0.9;
+  transition: opacity 2s ease-out; */
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-name: pulsar;
+}
+
+@keyframes pulsar {
+  from {
+    opacity: 0.9;
+  }
+
+  to {
+    opacity: 0.33;
+  }
 }

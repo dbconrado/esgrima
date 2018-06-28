@@ -7,8 +7,17 @@ window.addEventListener('load', function() {
   	pista.appendChild(novoToque(ev.center.x, ev.center.y));
   });
 
-  document.querySelector('.marcador.apagado').addEventListener('click', e => {
-  	
-  });
+
+
+  var clickPulsar = (e) => {
+    // para "restartar" a animação, tem que tirar o elemento e colocar de novo (ou novo)
+    e.target.classList.remove('clicado');
+    let node = e.target.cloneNode(true);
+    e.target.parentNode.replaceChild(node, e.target);
+    node.classList.add('clicado');
+    node.addEventListener('click', clickPulsar);
+  };
+
+  document.querySelector('.marcador.apagado').addEventListener('click', clickPulsar);
 
 });
