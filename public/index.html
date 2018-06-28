@@ -21,8 +21,28 @@
     <!-- menu vai aqui dentro -->
   </header>
   <main>
-    <!-- parte 1: a pista de Esgrima
-         parte 2: o boneco -->
+    
+    <!-- boneco -->
+    <div id="boneco" class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="atleta borda-redonda">
+          <h3>Eu</h3>
+          <img id="atleta1" src="img/stickman.svg" class="pure-img">
+          <div class="marcador apagado"></div>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="atleta borda-redonda adversario">
+          <h3>Adversário</h3>
+          <img id="atleta2" src="img/stickman.svg" class="pure-img">
+        </div>
+      </div>
+    </div>
+
+
+    <h3>Pista</h3>
+
+    <!-- a pista de Esgrima -->
     <div id="pista" class="pure-g borda">
       <div id="zona-ofensiva-2" class="pure-u-1-5 pista-fill borda">
         <p>OF2</p>
@@ -40,20 +60,14 @@
         <p>DEF2</p>
       </div>
     </div>
-    <i id="toque" class="fas fa-dot-circle"></i>
 
-    <!-- parte 2: boneco -->
-    <div id="boneco" class="pure-g">
-      <div class="pure-u-1">
-        <img src="img/stickman.svg" class="pure-img">
-      </div>
-    </div>
   </main>
   <footer>
   </footer>
 
   <script type="text/javascript" src="/scripts/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="/scripts/hammerjs/hammer.min.js"></script>
+  <script src="js/gerenciador-toques.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

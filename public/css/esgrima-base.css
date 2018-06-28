@@ -1,3 +1,15 @@
+/**
+
+TABELA DE CORES
+
+azul atleta - #13438e
+verde atleta - #438e13
+cinza borda - #eee
+pista - rgb(250, 250, 250)
+zona da pista - rgb(119, 119, 119)
+
+*/
+
 .pure-g > div, #pista {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -22,12 +34,63 @@ div[id^=zona-] {
   background-color: rgb(250, 250, 250);
 }
 
-#t {
+.toque {
   position: absolute;
-  top: 45px;
-  left: 45px;
 }
 
 #boneco img {
   margin: 0 auto;
+}
+
+.borda-redonda {
+  border: 1px solid;
+  border-radius: 0.2em;
+}
+
+.atleta {
+  border-color: #13438e;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.atleta h3 {
+  font-size: 70%;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  background-color: #13438e;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.adversario {
+  border-color: #438e13;
+}
+
+.adversario h3 {
+  background-color: #438e13;
+}
+
+main h3 {
+  text-align: center;
+}
+
+.marcador {
+  border-radius: 90%;
+  width: 35px;
+  height: 35px;
+  background-color: rgb(250,0,0);
+  position: absolute;
+  left: 45px;
+  top: 65px;
+}
+
+.apagado {
+  opacity: 0.33;
+}
+
+.clicado {
+  opacity: 0.33;
+  transition: opacity 2s ease-out;  
 }
