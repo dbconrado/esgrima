@@ -31,6 +31,12 @@
   background-color: purple;
 }
 
+.perna {
+  width: 22px;
+  height: 22px;
+  background-color: aqua;
+}
+
 .esquerdo, .direito {}
 
 .clicado {
