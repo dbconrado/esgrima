@@ -68,4 +68,16 @@ function posicionarMarcadores() {
 	y = 96;
 	pernaDir.style.left = x + 'px';
 	pernaDir.style.top = y + 'px';
+
+	let peEsq = document.querySelector('.pe.esquerdo');
+	x = 50;
+	y = 111;
+	peEsq.style.left = x + 'px';
+	peEsq.style.top = y + 'px';
+
+	let peDir = document.querySelector('.pe.direito');
+	x = 106;
+	y = 111;
+	peDir.style.left = x + 'px';
+	peDir.style.top = y + 'px';
 }

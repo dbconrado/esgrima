@@ -18,7 +18,7 @@
   background-color: green;
 }
 
-.braco, .mao {
+.braco, .mao, .pe {
   width: 20px;
   height: 20px;
 }
@@ -28,13 +28,17 @@
 }
 
 .mao {
-  background-color: purple;
+  background-color: yellow;
 }
 
 .perna {
   width: 22px;
   height: 22px;
   background-color: aqua;
+}
+
+.pe {
+  background-color: purple;
 }
 
 .esquerdo, .direito {}
