@@ -12,14 +12,14 @@ function posicionarMarcadores() {
 	// FIXME: o posicionamento e o tamanho dos marcadores tem que seguir o tamanho da imagem do boneco, que varia conforme a resolução da tela
 
 	// os deslocamentos são por causa da imagem do boneco, que não está centralizada na imagem. (stickman)
-	let deslocamentoX = 14;
-	let deslocamentoY = 5;
+	//let deslocamentoX = 14;
+	//let deslocamentoY = 5;
 
 	let atleta = document.querySelector('#atleta1');
 	let x = y = 0;
 
 	let cabeca = document.querySelector('.cabeca');
-	let centroX = (m) => atleta.width / 2 - m.offsetWidth / 2 + deslocamentoX;
+	//let centroX = (m) => atleta.width / 2 - m.offsetWidth / 2 + deslocamentoX;
 
 	x = 68.5; //centroX(cabeca);
 	y = 23.1; // atleta.y + atleta.height / 5 - cabeca.offsetHeight / 2 - deslocamentoY;
