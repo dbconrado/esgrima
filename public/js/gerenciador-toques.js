@@ -21,26 +21,26 @@ function posicionarMarcadores() {
 	let cabeca = document.querySelector('.cabeca');
 	let centroX = (m) => atleta.width / 2 - m.offsetWidth / 2 + deslocamentoX;
 
-	x = centroX(cabeca);
-	y = atleta.y + atleta.height / 5 - cabeca.offsetHeight / 2 - deslocamentoY;
+	x = 68.5; //centroX(cabeca);
+	y = 23.1; // atleta.y + atleta.height / 5 - cabeca.offsetHeight / 2 - deslocamentoY;
 	cabeca.style.left = x + 'px';
 	cabeca.style.top = y + 'px';
 
 	let tronco = document.querySelector('.tronco');
-	x = centroX(tronco);
-	y = atleta.y + atleta.height / 2 - tronco.offsetHeight / 2 + deslocamentoY;
+	x = 68.5; //centroX(tronco);
+	y = 65.5; // atleta.y + atleta.height / 2 - tronco.offsetHeight / 2 + deslocamentoY;
   tronco.style.left = x + 'px';
   tronco.style.top = y + 'px';
 
 	let bracoEsq = document.querySelector('.braco.esquerdo');
-	x = centroX(bracoEsq) - 20;
-	y = atleta.y + atleta.height / 4 + deslocamentoY - 2;
+	x = 56; //centroX(bracoEsq) - 20;
+	y = 54; //atleta.y + atleta.height / 4 + deslocamentoY - 2;
 	bracoEsq.style.left = x + 'px';
 	bracoEsq.style.top = y + 'px';
 
 	let bracoDir = document.querySelector('.braco.direito');
-	x = centroX(bracoDir) + 20;
-	y = atleta.y + atleta.height / 4 + deslocamentoY - 2;
+	x = 96; //centroX(bracoDir) + 20;
+	y = 54; //atleta.y + atleta.height / 4 + deslocamentoY - 2;
 	bracoDir.style.left = x + 'px';
 	bracoDir.style.top = y + 'px';
 
