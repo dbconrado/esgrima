@@ -18,6 +18,10 @@ window.addEventListener('load', function() {
     node.addEventListener('click', clickPulsar);
   };
 
-  document.querySelector('.marcador.apagado').addEventListener('click', clickPulsar);
+  let marcadores = document.querySelectorAll('.marcador');
+  marcadores.forEach(m => {
+    m.addEventListener('click', clickPulsar);
+  });
 
+  posicionarMarcadores();
 });

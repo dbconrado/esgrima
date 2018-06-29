@@ -1,0 +1,44 @@
+.marcador {
+  border-radius: 90%;
+  background-color: rgb(250,0,0);
+  border: 0;
+  opacity: 0.33;
+}
+
+.cabeca, .tronco, .braco {
+  position: absolute;
+}
+
+.cabeca, .tronco {
+  width: 35px;
+  height: 35px;
+}
+
+.tronco {
+  background-color: green;
+}
+
+.braco {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+}
+.esquerdo, .direito {}
+
+.clicado {
+  /*opacity: 0.9;
+  transition: opacity 2s ease-out; */
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-name: pulsar;
+}
+
+@keyframes pulsar {
+  from {
+    opacity: 0.9;
+  }
+
+  to {
+    opacity: 0.33;
+  }
+}

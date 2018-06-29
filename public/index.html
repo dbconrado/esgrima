@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="/scripts/purecss/build/grids-responsive-min.css">
 <!--<![endif]-->
   <link rel="stylesheet" href="/css/esgrima-base.css">
+  <link rel="stylesheet" href="/css/marcadores.css">
   <!-- font awesome icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <!--link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"-->
 </head>
 <body>
   <header>
@@ -27,8 +28,17 @@
       <div class="pure-u-1-2">
         <div class="atleta borda-redonda">
           <h3>Eu</h3>
-          <img id="atleta1" src="img/stickman.svg" class="pure-img">
-          <div class="marcador apagado"></div>
+          <map name="mapa">
+            <area onclick="window.alert('ui')" shape="circle" coords="30,30,30" href="#" alt="cabeca">
+          </map>
+          <img usemap="#mapa" id="atleta1" src="img/stickman.svg" class="pure-img">
+          <!--div class="marcador apagado"></div-->
+          <div class="marcadores">
+            <button class="marcador cabeca" alt="cabeca"></button>
+            <button class="marcador tronco" alt="cabeca"></button>
+            <button class="marcador braco esquerdo" alt="cabeca"></button>
+            <button class="marcador braco direito" alt="cabeca"></button>
+          </div>
         </div>
       </div>
       <div class="pure-u-1-2">
