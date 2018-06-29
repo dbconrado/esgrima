@@ -5,7 +5,7 @@
   opacity: 0.33;
 }
 
-.cabeca, .tronco, .braco {
+.cabeca, .tronco, .braco, .mao, .perna, .pe {
   position: absolute;
 }
 
@@ -18,11 +18,19 @@
   background-color: green;
 }
 
-.braco {
+.braco, .mao {
   width: 20px;
   height: 20px;
+}
+
+.braco {
   background-color: blue;
 }
+
+.mao {
+  background-color: purple;
+}
+
 .esquerdo, .direito {}
 
 .clicado {

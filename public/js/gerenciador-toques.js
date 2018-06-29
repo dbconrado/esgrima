@@ -9,8 +9,12 @@ function novoToque(x,y) {
 
 function posicionarMarcadores() {
 	// TODO: tem que posicionar dos dois atletas
+	// FIXME: o posicionamento e o tamanho dos marcadores tem que seguir o tamanho da imagem do boneco, que varia conforme a resolução da tela
+
+	// os deslocamentos são por causa da imagem do boneco, que não está centralizada na imagem. (stickman)
 	let deslocamentoX = 14;
 	let deslocamentoY = 5;
+
 	let atleta = document.querySelector('#atleta1');
 	let x = y = 0;
 
@@ -39,4 +43,17 @@ function posicionarMarcadores() {
 	y = atleta.y + atleta.height / 4 + deslocamentoY - 2;
 	bracoDir.style.left = x + 'px';
 	bracoDir.style.top = y + 'px';
+
+	let maoEsq = document.querySelector('.mao.esquerdo');
+	// 41 e 65
+	x = 41;
+	y = 65;
+	maoEsq.style.left = x + 'px';
+	maoEsq.style.top = y + 'px';
+
+	let maoDir = document.querySelector('.mao.direito');
+	x = 113;
+	y = 65;
+	maoDir.style.left = x + 'px';
+	maoDir.style.top = y + 'px';
 }
