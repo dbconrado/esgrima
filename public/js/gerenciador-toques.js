@@ -2,6 +2,8 @@ function novoToque(x,y) {
 	let toque = document.createElement('i');
 	['fas','fa-dot-circle', 'toque']
 		.forEach(e => toque.classList.add(e));
+	x = x - 8;
+	y = y - 8;
 	toque.style.left = x + 'px';
 	toque.style.top = y + 'px';
 	return toque;
