@@ -18,5 +18,6 @@ window.addEventListener('load', function() {
     m.addEventListener('click', selecionarMarcador);
   });
 
-  posicionarMarcadores();
+  document.querySelectorAll('.atleta')
+    .forEach(e => posicionarMarcadores(e));
 });

@@ -7,77 +7,77 @@ function novoToque(x,y) {
 	return toque;
 }
 
-function posicionarMarcadores() {
+function posicionarMarcadores(atleta) {
 	// TODO: tem que posicionar dos dois atletas
 	// FIXME: o posicionamento e o tamanho dos marcadores tem que seguir o tamanho da imagem do boneco, que varia conforme a resolução da tela
 
-	// os deslocamentos são por causa da imagem do boneco, que não está centralizada na imagem. (stickman)
-	//let deslocamentoX = 14;
-	//let deslocamentoY = 5;
+	//let atleta = document.querySelector('.atleta');
+	let marcadores = atleta.querySelector('.marcadores');
 
-	let atleta = document.querySelector('#atleta1');
+	let img = atleta.querySelector('img');
+	let offsetX = img.x;
+	let offsetY = img.y;
 	let x = y = 0;
 
-	let cabeca = document.querySelector('.cabeca');
-	//let centroX = (m) => atleta.width / 2 - m.offsetWidth / 2 + deslocamentoX;
+	let cabeca = marcadores.querySelector('.cabeca');
 
-	x = 68.5; //centroX(cabeca);
-	y = 23.1; // atleta.y + atleta.height / 5 - cabeca.offsetHeight / 2 - deslocamentoY;
+	x = offsetX + 60.5;
+	y = offsetY;
 	cabeca.style.left = x + 'px';
 	cabeca.style.top = y + 'px';
 
-	let tronco = document.querySelector('.tronco');
-	x = 68.5; //centroX(tronco);
-	y = 65.5; // atleta.y + atleta.height / 2 - tronco.offsetHeight / 2 + deslocamentoY;
+	let tronco = marcadores.querySelector('.tronco');
+	x = offsetX + 60.5;
+	y = offsetY + 41.5;
   tronco.style.left = x + 'px';
   tronco.style.top = y + 'px';
 
-	let bracoEsq = document.querySelector('.braco.esquerdo');
-	x = 56; //centroX(bracoEsq) - 20;
-	y = 54; //atleta.y + atleta.height / 4 + deslocamentoY - 2;
+	let bracoEsq = marcadores.querySelector('.braco.esquerdo');
+	x = offsetX + 48;
+	y = offsetY + 30;
 	bracoEsq.style.left = x + 'px';
 	bracoEsq.style.top = y + 'px';
 
-	let bracoDir = document.querySelector('.braco.direito');
-	x = 96; //centroX(bracoDir) + 20;
-	y = 54; //atleta.y + atleta.height / 4 + deslocamentoY - 2;
+	let bracoDir = marcadores.querySelector('.braco.direito');
+	x = offsetX + 88;
+	y = offsetY + 30;
 	bracoDir.style.left = x + 'px';
 	bracoDir.style.top = y + 'px';
 
-	let maoEsq = document.querySelector('.mao.esquerdo');
+	let maoEsq = marcadores.querySelector('.mao.esquerdo');
 	// 41 e 65
-	x = 41;
-	y = 65;
+	x = offsetX + 33;
+	y = offsetY + 41;
 	maoEsq.style.left = x + 'px';
 	maoEsq.style.top = y + 'px';
 
-	let maoDir = document.querySelector('.mao.direito');
-	x = 113;
-	y = 65;
+	let maoDir = marcadores.querySelector('.mao.direito');
+	x = offsetX + 105;
+	y = offsetY + 41;
 	maoDir.style.left = x + 'px';
 	maoDir.style.top = y + 'px';
 
-	let pernaEsq = document.querySelector('.perna.esquerdo');
-	x = 63;
-	y = 96;
+	let pernaEsq = marcadores.querySelector('.perna.esquerdo');
+	x = offsetX + 55;
+	y = offsetY + 72;
 	pernaEsq.style.left = x + 'px';
 	pernaEsq.style.top = y + 'px';
 
-	let pernaDir = document.querySelector('.perna.direito');
-	x = 90;
-	y = 96;
+	let pernaDir = marcadores.querySelector('.perna.direito');
+	x = offsetX + 82;
+	y = offsetY + 72;
 	pernaDir.style.left = x + 'px';
 	pernaDir.style.top = y + 'px';
 
-	let peEsq = document.querySelector('.pe.esquerdo');
-	x = 50;
-	y = 111;
+	let peEsq = marcadores.querySelector('.pe.esquerdo');
+	x = offsetX + 42;
+	y = offsetY + 87;
 	peEsq.style.left = x + 'px';
 	peEsq.style.top = y + 'px';
 
-	let peDir = document.querySelector('.pe.direito');
-	x = 106;
-	y = 111;
+	let peDir = marcadores.querySelector('.pe.direito');
+	x = offsetX + 98;
+	y = offsetY + 87;
 	peDir.style.left = x + 'px';
 	peDir.style.top = y + 'px';
 }
