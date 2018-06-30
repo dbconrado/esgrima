@@ -83,3 +83,29 @@ function posicionarMarcadores(atleta) {
 	peDir.style.left = x + 'px';
 	peDir.style.top = y + 'px';
 }
+
+var Selecionador = function(divBotoesAcoes) {
+	this.div = divBotoesAcoes;
+
+	this.selecionar = function(botao) {
+		divBotoesAcoes.querySelectorAll('.pure-button-active')
+			.forEach(e => e.classList.remove('pure-button-active'));
+		botao.classList.add('pure-button-active');
+	};
+
+	this.div.querySelectorAll('.pure-button')
+		.forEach(e => {
+			e.addEventListener('click', ev => {
+				this.selecionar(ev.target);
+			})
+		});
+}
+
+function configurarBotoesAcao() {
+	let acoes = document.querySelector('#acoes');
+
+	var selecionadores = [];
+	acoes.querySelectorAll('.botoesacoes').forEach(ba => {
+		selecionadores.push(new Selecionador(ba));
+	});
+}

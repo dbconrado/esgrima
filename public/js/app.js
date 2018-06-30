@@ -7,8 +7,6 @@ window.addEventListener('load', function() {
   	pista.appendChild(novoToque(ev.center.x, ev.center.y));
   });
 
-
-
   var selecionarMarcador = (e) => {
     e.target.classList.add('clicado');
   };
@@ -20,4 +18,8 @@ window.addEventListener('load', function() {
 
   document.querySelectorAll('.atleta')
     .forEach(e => posicionarMarcadores(e));
+
+
+  // ações
+  configurarBotoesAcao();
 });
