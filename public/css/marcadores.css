@@ -44,14 +44,14 @@
 .esquerdo, .direito {}
 
 .clicado {
-  /*opacity: 0.9;
-  transition: opacity 2s ease-out; */
-  animation-direction: alternate;
+  opacity: 0.9;
+  transition: opacity 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  /*animation-direction: alternate;
   animation-duration: 1s;
-  animation-name: pulsar;
+  animation-name: pulsar;*/
 }
 
-@keyframes pulsar {
+/*@keyframes pulsar {
   from {
     opacity: 0.9;
   }
@@ -59,4 +59,4 @@
   to {
     opacity: 0.33;
   }
-}
+}*/

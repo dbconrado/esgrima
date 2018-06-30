@@ -9,18 +9,13 @@ window.addEventListener('load', function() {
 
 
 
-  var clickPulsar = (e) => {
-    // para "restartar" a animação, tem que tirar o elemento e colocar de novo (ou novo)
-    e.target.classList.remove('clicado');
-    let node = e.target.cloneNode(true);
-    e.target.parentNode.replaceChild(node, e.target);
-    node.classList.add('clicado');
-    node.addEventListener('click', clickPulsar);
+  var selecionarMarcador = (e) => {
+    e.target.classList.add('clicado');
   };
 
   let marcadores = document.querySelectorAll('.marcador');
   marcadores.forEach(m => {
-    m.addEventListener('click', clickPulsar);
+    m.addEventListener('click', selecionarMarcador);
   });
 
   posicionarMarcadores();
