@@ -22,4 +22,15 @@ window.addEventListener('load', function() {
 
   // ações
   configurarBotoesAcao();
+
+  document.querySelector('.marcador').addEventListener('click', ev=> {
+    var popper = new Popper(
+      document.querySelector('.marcador'),
+      document.querySelector('#acoes'),
+      {
+        placement: 'right',
+      }
+    );
+    document.querySelector('#acoes').style.display = 'block';
+  });
 });

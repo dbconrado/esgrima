@@ -78,7 +78,9 @@ main h3 {
 
 #acoes {
   width: 13em;
-  border: 1px solid;
+  border: 1px solid #eee;
+  border-radius: 2px;
+  background-color: #fff;
   font-size: 50%;
 }
 
