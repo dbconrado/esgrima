@@ -23,14 +23,19 @@ window.addEventListener('load', function() {
   // ações
   configurarBotoesAcao();
 
-  document.querySelector('.marcador').addEventListener('click', ev=> {
+  let abrirAcoes = function(marcador) {
     var popper = new Popper(
-      document.querySelector('.marcador'),
+      marcador,
       document.querySelector('#acoes'),
       {
         placement: 'right',
       }
     );
     document.querySelector('#acoes').style.display = 'block';
-  });
+  };
+
+  document.querySelectorAll('.marcador')
+    .forEach(m => m.addEventListener('click', ev => {
+      abrirAcoes(ev.target);
+    }));
 });
