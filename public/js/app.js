@@ -10,6 +10,7 @@ window.addEventListener('load', function() {
 
   // TODO: documentar
   var selecionarMarcador = (e) => {
+    e.preventDefault();
     e.target.classList.add('clicado');
   };
 
