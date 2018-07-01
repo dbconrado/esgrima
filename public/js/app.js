@@ -1,5 +1,6 @@
 window.addEventListener('load', function() {
 
+  // FIXME: deixar apontar o local da pista apenas uma vez
   var pista = document.querySelector('#pista');
   var hammer = new Hammer(pista);
 
