@@ -54,7 +54,7 @@ var MovimentoControlador = function() {
       return;
     }
 
-    if (!this.salvo)
+    if (!this.salvo) {
       this.salvar();
     }
 
