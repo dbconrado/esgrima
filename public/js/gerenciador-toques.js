@@ -10,6 +10,30 @@ var GerenciadorToques = function() {
 		return toque;
 	}
 
+	function configurarMarcadores() {
+		// TODO: documentar
+	  let selecionarMarcador = function(e) {
+	    e.preventDefault();
+	    e.target.classList.add('clicado');
+	  };
+
+		let abrirAcoes = function(e) {
+			var marcador = e.target;
+	    var popper = new Popper(marcador, document.querySelector('#acoes'),
+	      {
+	        placement: 'right',
+	      }
+	    );
+	    document.querySelector('#acoes').style.display = 'block';
+	  };
+
+	  let marcadores = document.querySelectorAll('.marcador');
+	  marcadores.forEach(m => {
+	    m.addEventListener('click', selecionarMarcador);
+			m.addEventListener('click', abrirAcoes);
+	  });
+	}
+
 	function posicionarMarcadores(atleta) {
 		// TODO: tem que posicionar dos dois atletas
 		// FIXME: o posicionamento e o tamanho dos marcadores tem que seguir o tamanho da imagem do boneco, que varia conforme a resolução da tela
@@ -114,6 +138,7 @@ var GerenciadorToques = function() {
 	return {
 		configurarBotoesAcao: configurarBotoesAcao,
 		posicionarMarcadores: posicionarMarcadores,
-		novoToque: novoToque
+		novoToque: novoToque,
+		configurarMarcadores: configurarMarcadores
 	};
 };
