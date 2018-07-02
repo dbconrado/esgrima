@@ -1,3 +1,4 @@
+'use strict';
 var GerenciadorToques = function() {
 	function novoToque(x,y) {
 		var toque = document.createElement('i');
@@ -44,7 +45,8 @@ var GerenciadorToques = function() {
 		var img = atleta.querySelector('img');
 		var offsetX = img.x;
 		var offsetY = img.y;
-		var x = y = 0;
+		var x = 0;
+		var y = 0;
 
 		var cabeca = marcadores.querySelector('.cabeca');
 
@@ -144,28 +146,41 @@ var GerenciadorToques = function() {
 };
 
 var MarcadorTracker = function() {
-	this.marcadores = {
-		cabeca: {selecionado: false},
-		tronco: {selecionado: false},
-		bracoEsquerdo: {selecionado: false},
-		bracoDireito: {selecionado: false},
-		maoEsquerda: {selecionado: false},
-		maoDireita: {selecionado: false},
-		pernaEsquerda: {selecionado: false},
-		pernaDireita: {selecionado: false},
-		peEsquerdo: {selecionado: false},
-		peDireito: {selecionado: false},
+	var Partes = function() {
+		return {
+			cabeca: {selecionado: false},
+			tronco: {selecionado: false},
+			bracoEsquerdo: {selecionado: false},
+			bracoDireito: {selecionado: false},
+			maoEsquerda: {selecionado: false},
+			maoDireita: {selecionado: false},
+			pernaEsquerda: {selecionado: false},
+			pernaDireita: {selecionado: false},
+			peEsquerdo: {selecionado: false},
+			peDireito: {selecionado: false},
+		};
 	};
 
-	this.toggle = function(marcador) {
-		var valorOriginal = this.marcadores[marcador].selecionado;
-		this.marcadores[marcador].selecionado = !valorOriginal;
-		Object.entries(this.marcadores)
+	this.marcadores = {
+		atleta1: new Partes(),
+		atleta2: new Partes()
+	};
+
+	this.toggle = function(atleta, marcador) {
+		var valorOriginal = this.marcadores[atleta][marcador].selecionado;
+		for (var at in this.marcadores) {
+			for (var parte in this.marcadores[at]) {
+				this.marcadores[at][parte].selecionado = false;
+			}
+		}
+		this.marcadores[atleta][marcador].selecionado = !valorOriginal;
+		/*Object.entries(this.marcadores)
+			.reduce((acc,e) => acc.push(e[1]), [])
 			.filter(entry => entry[0] !== marcador)
-			.forEach(entry => entry[1].selecionado = false);
+			.forEach(entry => entry[1].selecionado = false);*/
 	}
 
-	this.isSelecionado = function(marcador) {
-		return this.marcadores[marcador].selecionado;
+	this.isSelecionado = function(atleta, marcador) {
+		return this.marcadores[atleta][marcador].selecionado;
 	}
 }

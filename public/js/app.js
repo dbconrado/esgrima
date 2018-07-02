@@ -1,5 +1,6 @@
 (function() {
-
+  "use strict";
+  
   var gerenciadorToques = new GerenciadorToques();
 
   //gerenciadorToques.configurarMarcadores();
