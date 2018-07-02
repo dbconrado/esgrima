@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  
+
   var gerenciadorToques = new GerenciadorToques();
 
   //gerenciadorToques.configurarMarcadores();
@@ -12,7 +12,7 @@
       .forEach(e => gerenciadorToques.posicionarMarcadores(e));
 
   });
-  /*
+
   // FIXME: deixar apontar o local da pista apenas uma vez
   var pista = document.querySelector('#pista');
   var hammer = new Hammer(pista);
@@ -20,7 +20,7 @@
   hammer.on('tap', (ev) => {
     pista.appendChild(gerenciadorToques.novoToque(ev.center.x, ev.center.y));
   });
-  */
+  
 
   var app = new Vue({
     el: '#boneco',
