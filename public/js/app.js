@@ -20,13 +20,27 @@
   hammer.on('tap', (ev) => {
     pista.appendChild(gerenciadorToques.novoToque(ev.center.x, ev.center.y));
   });
-  
 
   var app = new Vue({
     el: '#boneco',
     data: {
       tracker: new MarcadorTracker()
     }
+  });
+
+  var abrirAcoes = function(e) {
+    var marcador = e.target;
+    var popper = new Popper(marcador, document.querySelector('#acoes'),
+      {
+        placement: 'right',
+      }
+    );
+    document.querySelector('#acoes').style.display = 'block';
+  };
+
+  var marcadores = document.querySelectorAll('.marcador');
+  marcadores.forEach(m => {
+    m.addEventListener('click', abrirAcoes);
   });
 
 })();
