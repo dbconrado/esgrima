@@ -167,17 +167,12 @@ var MarcadorTracker = function() {
 	};
 
 	this.toggle = function(atleta, marcador) {
-		var valorOriginal = this.marcadores[atleta][marcador].selecionado;
 		for (var at in this.marcadores) {
 			for (var parte in this.marcadores[at]) {
 				this.marcadores[at][parte].selecionado = false;
 			}
 		}
-		this.marcadores[atleta][marcador].selecionado = !valorOriginal;
-		/*Object.entries(this.marcadores)
-			.reduce((acc,e) => acc.push(e[1]), [])
-			.filter(entry => entry[0] !== marcador)
-			.forEach(entry => entry[1].selecionado = false);*/
+		this.marcadores[atleta][marcador].selecionado = true;
 	}
 
 	this.isSelecionado = function(atleta, marcador) {
