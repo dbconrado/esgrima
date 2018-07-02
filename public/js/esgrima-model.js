@@ -35,8 +35,9 @@ var MovimentoControlador = function() {
   }
 
   this.proximo = function() {
-    if (!this.salvo)
+    if (!this.salvo) {
       this.salvar();
+    }
 
     this.atual++;
     if (!(this.atual in this.movimentos)) {
@@ -44,18 +45,22 @@ var MovimentoControlador = function() {
       this.salvo = false;
     } else {
       this.movimento = this.movimentos[this.atual]; // pegar o já existente
+      this.salvo = true;
     }
   }
 
   this.anterior = function() {
-    if (this.atual === 0)
+    if (this.atual === 0) {
       return;
+    }
 
     if (!this.salvo)
       this.salvar();
+    }
 
     this.atual--;
     this.movimento = this.movimentos[this.atual];
+    this.salvo = true;
   }
 
   this.quantidade = function() {
