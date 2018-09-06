@@ -43,4 +43,11 @@
     m.addEventListener('click', abrirAcoes);
   });
 
+  var mov = new Vue({
+    el: '#cabecalho',
+    data: {
+      controlador: new MovimentoControlador()
+    }
+  });
+
 })();
