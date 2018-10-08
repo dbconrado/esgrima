@@ -50,4 +50,7 @@
     }
   });
 
+  var ofensivas = document.querySelector('#ofensivas');
+  new Selecionador(ofensivas);
+
 })();
