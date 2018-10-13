@@ -10,6 +10,22 @@ zona da pista - rgb(119, 119, 119)
 
 */
 
+#ofensivas button{
+ font-size : 70%;
+ white-space:  normal;
+ height: 42px ;
+
+}
+
+#movimentos {
+ margin-left: 35%;
+}
+#movimentos button{
+  font-size: 55%;
+white-space: normal;
+}
+
+
 .pure-g > div, #pista {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
