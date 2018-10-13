@@ -9,12 +9,32 @@ pista - rgb(250, 250, 250)
 zona da pista - rgb(119, 119, 119)
 
 */
+#iconeEsgrima{
+  width:  32px;
+  height: 32px;
+  float: left;
+  margin: 5%;
+
+}
+#cabecalho button{
+  margin-top: 10%; 
+}
+
 
 #ofensivas button{
- font-size : 70%;
+ width: 85%;
  white-space:  normal;
- height: 42px ;
+ height: 95% ;
+ font-size: 80%;
+ padding-left: 7px;
+ padding-right: 7px;
+ 
 
+}
+
+
+#defensivas {
+  margin-left: 35%;
 }
 
 #movimentos {
@@ -24,7 +44,9 @@ zona da pista - rgb(119, 119, 119)
   font-size: 55%;
 white-space: normal;
 }
-
+#efetividade button{
+  width: 100%;
+}
 
 .pure-g > div, #pista {
   -webkit-box-sizing: border-box;
