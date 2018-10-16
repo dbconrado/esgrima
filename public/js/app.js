@@ -29,7 +29,7 @@
   });
 
   var mov = new Vue({
-    el: '#cabecalho',
+    el: 'footer',
     data: {
       controlador: new MovimentoControlador()
     }

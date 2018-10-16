@@ -38,7 +38,7 @@
 }
 
 .pe {
-  background-color: purple !important;
+  background-color: purple ;
 }
 
 .direita{
@@ -49,7 +49,6 @@
   background-color: red;
 }
 
-.esquerdo, .direito {}
 
 .clicado {
   opacity: 0.9;
