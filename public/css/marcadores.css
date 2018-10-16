@@ -38,7 +38,15 @@
 }
 
 .pe {
-  background-color: purple;
+  background-color: purple !important;
+}
+
+.direita{
+  background-color: green;
+}
+
+.esquerda{
+  background-color: red;
 }
 
 .esquerdo, .direito {}

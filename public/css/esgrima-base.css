@@ -114,18 +114,7 @@ main h3 {
   text-align: center;
 }
 
-#acoes {
-  width: 13em;
-  border: 1px solid #eee;
-  border-radius: 2px;
-  background-color: #fff;
-  font-size: 50%;
-}
 
-#acoes div {
-  width: 100%;
-  text-align: center;
-}
 
 .botoes {
   margin-bottom: 2px;

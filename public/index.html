@@ -38,11 +38,6 @@
     </header>
   <main>
       
-        <div id="movimentos" class="pure-u-1">
-          <button class=" pure-button" v-on:click="controlador.anterior()">Anterior</button>
-          <button class=" pure-button" v-on:click="controlador.proximo()">Próximo</button>
-        
-        </div>
       
     <!-- boneco -->
     <div id="boneco" class="pure-g">
@@ -51,16 +46,16 @@
           <h3>Eu</h3>
           <img id="atleta1" src="img/stickman.svg" class="pure-img" width="144" height="108">
           <div class="marcadores">
-            <button class="marcador cabeca" v-bind:class="{clicado: tracker.isSelecionado('atleta1','cabeca')}" v-on:click.prevent="tracker.toggle('atleta1','cabeca')"></button>
-            <button class="marcador tronco" v-bind:class="{clicado: tracker.isSelecionado('atleta1','tronco')}" v-on:click.prevent="tracker.toggle('atleta1','tronco')"></button>
-            <button class="marcador braco esquerdo" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'bracoEsquerdo')}" v-on:click.prevent="tracker.toggle('atleta1', 'bracoEsquerdo')"></button>
-            <button class="marcador braco direito" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'bracoDireito')}" v-on:click.prevent="tracker.toggle('atleta1', 'bracoDireito')"></button>
-            <button class="marcador mao esquerdo" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'maoEsquerda')}" v-on:click.prevent="tracker.toggle('atleta1', 'maoEsquerda')"></button>
-            <button class="marcador mao direito" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'maoDireita')}" v-on:click.prevent="tracker.toggle('atleta1', 'maoDireita')"></button>
-            <button class="marcador perna esquerdo" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'pernaEsquerda')}" v-on:click.prevent="tracker.toggle('atleta1', 'pernaEsquerda')"></button>
-            <button class="marcador perna direito" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'pernaDireita')}" v-on:click.prevent="tracker.toggle('atleta1', 'pernaDireita')"></button>
-            <button class="marcador pe esquerdo" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'peEsquerdo')}" v-on:click.prevent="tracker.toggle('atleta1', 'peEsquerdo')"></button>
-            <button class="marcador pe direito" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'peDireito')}" v-on:click.prevent="tracker.toggle('atleta1', 'peDireito')"></button>
+            <button class="marcador cabeca esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1','cabeca')}" v-on:click.prevent="tracker.toggle('atleta1','cabeca')"></button>
+            <button class="marcador tronco esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1','tronco')}" v-on:click.prevent="tracker.toggle('atleta1','tronco')"></button>
+            <button class="marcador braco esquerdo  esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'bracoEsquerdo')}" v-on:click.prevent="tracker.toggle('atleta1', 'bracoEsquerdo')"></button>
+            <button class="marcador braco direito  esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'bracoDireito')}" v-on:click.prevent="tracker.toggle('atleta1', 'bracoDireito')"></button>
+            <button class="marcador mao esquerdo  esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'maoEsquerda')}" v-on:click.prevent="tracker.toggle('atleta1', 'maoEsquerda')"></button>
+            <button class="marcador mao direito  esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'maoDireita')}" v-on:click.prevent="tracker.toggle('atleta1', 'maoDireita')"></button>
+            <button class="marcador perna esquerdo  esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'pernaEsquerda')}" v-on:click.prevent="tracker.toggle('atleta1', 'pernaEsquerda')"></button>
+            <button class="marcador perna direito  esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'pernaDireita')}" v-on:click.prevent="tracker.toggle('atleta1', 'pernaDireita')"></button>
+            <button class="marcador pe esquerdo  esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'peEsquerdo')}" v-on:click.prevent="tracker.toggle('atleta1', 'peEsquerdo')"></button>
+            <button class="marcador pe direito  esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'peDireito')}" v-on:click.prevent="tracker.toggle('atleta1', 'peDireito')"></button>
           </div>
         </div>
       </div>
@@ -69,23 +64,21 @@
           <h3>Adversário</h3>
           <img id="atleta2" src="img/stickman.svg" class="pure-img" width="144" height="108">
           <div class="marcadores">
-            <button class="marcador cabeca" v-bind:class="{clicado: tracker.isSelecionado('atleta2','cabeca')}" v-on:click.prevent="tracker.toggle('atleta2','cabeca')"></button>
-            <button class="marcador tronco" v-bind:class="{clicado: tracker.isSelecionado('atleta2','tronco')}" v-on:click.prevent="tracker.toggle('atleta2','tronco')"></button>
-            <button class="marcador braco esquerdo" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'bracoEsquerdo')}" v-on:click.prevent="tracker.toggle('atleta2', 'bracoEsquerdo')"></button>
-            <button class="marcador braco direito" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'bracoDireito')}" v-on:click.prevent="tracker.toggle('atleta2', 'bracoDireito')"></button>
-            <button class="marcador mao esquerdo" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'maoEsquerda')}" v-on:click.prevent="tracker.toggle('atleta2', 'maoEsquerda')"></button>
-            <button class="marcador mao direito" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'maoDireita')}" v-on:click.prevent="tracker.toggle('atleta2', 'maoDireita')"></button>
-            <button class="marcador perna esquerdo" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'pernaEsquerda')}" v-on:click.prevent="tracker.toggle('atleta2', 'pernaEsquerda')"></button>
-            <button class="marcador perna direito" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'pernaDireita')}" v-on:click.prevent="tracker.toggle('atleta2', 'pernaDireita')"></button>
-            <button class="marcador pe esquerdo" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'peEsquerdo')}" v-on:click.prevent="tracker.toggle('atleta2', 'peEsquerdo')"></button>
-            <button class="marcador pe direito" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'peDireito')}" v-on:click.prevent="tracker.toggle('atleta2', 'peDireito')"></button>
+            <button class="marcador cabeca direita" v-bind:class="{clicado: tracker.isSelecionado('atleta2','cabeca')}" v-on:click.prevent="tracker.toggle('atleta2','cabeca')"></button>
+            <button class="marcador tronco direita" v-bind:class="{clicado: tracker.isSelecionado('atleta2','tronco')}" v-on:click.prevent="tracker.toggle('atleta2','tronco')"></button>
+            <button class="marcador braco esquerdo direita" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'bracoEsquerdo')}" v-on:click.prevent="tracker.toggle('atleta2', 'bracoEsquerdo')"></button>
+            <button class="marcador braco direito direita" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'bracoDireito')}" v-on:click.prevent="tracker.toggle('atleta2', 'bracoDireito')"></button>
+            <button class="marcador mao esquerdo direita" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'maoEsquerda')}" v-on:click.prevent="tracker.toggle('atleta2', 'maoEsquerda')"></button>
+            <button class="marcador mao direito direita" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'maoDireita')}" v-on:click.prevent="tracker.toggle('atleta2', 'maoDireita')"></button>
+            <button class="marcador perna esquerdo direita" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'pernaEsquerda')}" v-on:click.prevent="tracker.toggle('atleta2', 'pernaEsquerda')"></button>
+            <button class="marcador perna direito direita" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'pernaDireita')}" v-on:click.prevent="tracker.toggle('atleta2', 'pernaDireita')"></button>
+            <button class="marcador pe esquerdo direita" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'peEsquerdo')}" v-on:click.prevent="tracker.toggle('atleta2', 'peEsquerdo')"></button>
+            <button class="marcador pe direito direita" v-bind:class="{clicado: tracker.isSelecionado('atleta2', 'peDireito')}" v-on:click.prevent="tracker.toggle('atleta2', 'peDireito')"></button>
           </div>
         </div>
       </div>
     </div>
 
-    <h3>Ações</h3>
-    
     <!-- botões de açoes-->
       <div id="ofensivas" class="pure-g">
          <div class="pure-u-1-4">
@@ -119,9 +112,6 @@
        </div>
    </div>
      
-    
-
-    <h3>Pista</h3>
 
     <!-- a pista de Esgrima -->
     <div id="pista" class="pure-g borda">
@@ -141,46 +131,18 @@
         <p>DEF2</p>
       </div>
     </div>
-
-    <div id="acoes" style="display: none">
-      <div class="pure-button-group botoesacoes" role="group">
-        <button class="pure-button pure-button-active" data-tipo="falha">falha</button>
-        <button class="pure-button botao-ponto" data-tipo="ponto">ponto</button>
-      </div>
-      <div class="botoesacoes">
-        <p>ação ofensiva</p>
-        <div class="botoes">
-          <button class="pure-button">1</button>
-          <button class="pure-button">2</button>
-          <button class="pure-button">3</button>
-        </div>
-        <div class="botoes">
-          <button class="pure-button">4</button>
-          <button class="pure-button">5</button>
-          <button class="pure-button">6</button>
-        </div>
-      </div>
-      <div class="botoesacoes">
-        <p>ação defensiva</p>
-        <div class="botoes">
-          <button class="pure-button">1</button>
-          <button class="pure-button">2</button>
-          <button class="pure-button">3</button>
-        </div>
-        <div class="botoes">
-          <button class="pure-button">4</button>
-          <button class="pure-button">5</button>
-          <button class="pure-button">6</button>
-        </div>
-      </div>
-      <div class="pure-button-group botoesacoes">
-        <button class="pure-button pure-button-active">Falhou</button>
-        <button class="pure-button">contraponto</button>
-      </div>
+ 
+    
+    <div id="movimentos" class="pure-u-1">
+    
     </div>
+
 
   </main>
   <footer>
+      <a href="#"><i class="fas fa-angle-left"></i></a>
+    <a href="#"><i class="fas fa-angle-right"></i></a>
+    
   </footer>
 
   <!-- FIXME trocar a vue por modulo npm -->
@@ -194,6 +156,5 @@
   <script src="js/selecionador.js"></script>
   <script src="js/gerenciador-toques.js"></script>
   <script src="js/app.js"></script>
-  <script type="text/javascript" src="js/vitor.js"></script>
 </body>
 </html>

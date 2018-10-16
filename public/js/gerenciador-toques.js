@@ -18,20 +18,9 @@ var GerenciadorToques = function() {
 	    e.target.classList.add('clicado');
 	  };
 
-		var abrirAcoes = function(e) {
-			var marcador = e.target;
-	    var popper = new Popper(marcador, document.querySelector('#acoes'),
-	      {
-	        placement: 'right',
-	      }
-	    );
-	    document.querySelector('#acoes').style.display = 'block';
-	  };
-
 	  var marcadores = document.querySelectorAll('.marcador');
 	  marcadores.forEach(m => {
-	    m.addEventListener('click', selecionarMarcador);
-			m.addEventListener('click', abrirAcoes);
+	    m.addEventListener('click', selecionarMarcador);		
 	  });
 	}
 
@@ -111,17 +100,9 @@ var GerenciadorToques = function() {
 		peDir.style.top = y + 'px';
 	}
 
-	function configurarBotoesAcao() {
-		var acoes = document.querySelector('#acoes');
-
-		var selecionadores = [];
-		acoes.querySelectorAll('.botoesacoes').forEach(ba => {
-			selecionadores.push(new Selecionador(ba));
-		});
-	}
+	
 
 	return {
-		configurarBotoesAcao: configurarBotoesAcao,
 		posicionarMarcadores: posicionarMarcadores,
 		novoToque: novoToque,
 		configurarMarcadores: configurarMarcadores

@@ -3,8 +3,8 @@
 
   var gerenciadorToques = new GerenciadorToques();
 
-  //gerenciadorToques.configurarMarcadores();
-  gerenciadorToques.configurarBotoesAcao();
+  gerenciadorToques.configurarMarcadores();
+ 
 
   window.addEventListener('load', function() {
 
@@ -26,21 +26,6 @@
     data: {
       tracker: new MarcadorTracker()
     }
-  });
-
-  var abrirAcoes = function(e) {
-    var marcador = e.target;
-    var popper = new Popper(marcador, document.querySelector('#acoes'),
-      {
-        placement: 'right',
-      }
-    );
-    document.querySelector('#acoes').style.display = 'block';
-  };
-
-  var marcadores = document.querySelectorAll('.marcador');
-  marcadores.forEach(m => {
-    m.addEventListener('click', abrirAcoes);
   });
 
   var mov = new Vue({
