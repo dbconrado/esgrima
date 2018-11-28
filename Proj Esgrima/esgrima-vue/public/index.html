@@ -43,7 +43,7 @@
           <h3>Eu</h3>
           <img id="atleta1" src="img/stickman.svg" class="pure-img" width="144" height="108">
           <div class="marcadores">
-            <button class="marcador cabeca esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1','cabeca')}" v-on:click.prevent="tracker.toggle('atleta1','cabeca')" v-on:click="setLocal(1)"></button>
+            <button class="marcador cabeca esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1','cabeca')}" v-on:click.prevent="tracker.toggle('atleta1','cabeca')" ></button>
             <button class="marcador tronco esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1','tronco')}" v-on:click.prevent="tracker.toggle('atleta1','tronco')"></button>
             <button class="marcador braco esquerdo  esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'bracoEsquerdo')}" v-on:click.prevent="tracker.toggle('atleta1', 'bracoEsquerdo')"></button>
             <button class="marcador braco direito  esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'bracoDireito')}" v-on:click.prevent="tracker.toggle('atleta1', 'bracoDireito')"></button>

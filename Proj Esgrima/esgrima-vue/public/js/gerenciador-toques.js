@@ -140,6 +140,39 @@ var MarcadorTracker = function() {
 	}
 
 	this.isSelecionado = function(atleta, marcador) {
+		if(atleta=="atleta1"){
+		if(marcador=="cabeca"){
+			   setLocal(1);
+		   }else if(marcador=="tronco"){
+			setLocal(2);
+		   }else if(marcador=="bracoEsquerdo"){
+			setLocal(3);
+	       }else if(marcador=="bracoDireito"){
+			setLocal(4);
+		   }else if(marcador=="pernaEsquerda"){
+			setLocal(5);
+		   }else if(marcador=="pernaDireita"){
+			setLocal(6);
+		   }
+		}else{
+			if(marcador=="cabeca"){
+				setLocal(7);
+			}else if(marcador=="tronco"){
+			 setLocal(8);
+			}else if(marcador=="bracoEsquerdo"){
+			 setLocal(9);
+			}else if(marcador=="bracoDireito"){
+			 setLocal(10);
+			}else if(marcador=="pernaEsquerda"){
+			 setLocal(11);
+			}else if(marcador=="pernaDireita"){
+			 setLocal(12);
+			}
+		 }
+
+
+
+		}
 		return this.marcadores[atleta][marcador].selecionado;
 	}
 }
