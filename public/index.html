@@ -29,7 +29,7 @@
     </div>
 
    
-    <div class="pure-u-1-2">
+    <div id="divConcluir" class="pure-u-1-2">
         <button class="pure-button">Concluir luta</button>
     </div>
     </header>
@@ -43,7 +43,7 @@
           <h3>Eu</h3>
           <img id="atleta1" src="img/stickman.svg" class="pure-img" width="144" height="108">
           <div class="marcadores">
-            <button class="marcador cabeca esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1','cabeca')}" v-on:click.prevent="tracker.toggle('atleta1','cabeca')"></button>
+            <button class="marcador cabeca esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1','cabeca')}" v-on:click.prevent="tracker.toggle('atleta1','cabeca')" v-on:click="setLocal(1)"></button>
             <button class="marcador tronco esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1','tronco')}" v-on:click.prevent="tracker.toggle('atleta1','tronco')"></button>
             <button class="marcador braco esquerdo  esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'bracoEsquerdo')}" v-on:click.prevent="tracker.toggle('atleta1', 'bracoEsquerdo')"></button>
             <button class="marcador braco direito  esquerda" v-bind:class="{clicado: tracker.isSelecionado('atleta1', 'bracoDireito')}" v-on:click.prevent="tracker.toggle('atleta1', 'bracoDireito')"></button>
@@ -79,16 +79,16 @@
     <!-- botões de açoes-->
       <div id="ofensivas" class="pure-g">
          <div class="pure-u-1-4">
-          <button class="pure-button">Ataque</button>
+          <button class="pure-button" onclick="setOfencivo(1)">Ataque</button>
         </div>
         <div class="pure-u-1-4">
-           <button class="pure-button">Resposta</button>
+           <button class="pure-button" onclick="setOfencivo(2)">Resposta</button>
         </div>
         <div class="pure-u-1-4">
-           <button class="pure-button">Contra Resposta</button>
+           <button class="pure-button" onclick="setOfencivo(3)">Contra Resposta</button>
         </div>
         <div class="pure-u-1-4">
-          <button class="pure-button">Contra Ataque</button>
+          <button class="pure-button" onclick="setOfencivo(4)">Contra Ataque</button>
         </div>
     </div>
 

@@ -131,6 +131,7 @@ header {
 
 header> button {
 background-color: transparent;
+
 }
 
 header div:nth-of-type(2) {
@@ -154,4 +155,8 @@ footer>div{
 #setadireita{
   text-align: right;
 
+}
+
+#divConcluir{
+  align-content: center;
 }
