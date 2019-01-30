@@ -30,6 +30,13 @@ function setOfencivo(val){
     }
     alert(ofencivo);
 }
+function setEfetivo(val){
+    
+        efetividade=val;
+        
+    
+    alert( efetividade);
+}
 function setDefencivo( val){
     if(defencivo==val){
         defencivo=0;
@@ -54,7 +61,7 @@ function proximoMovi(){
   }else if(efetividade==0){
     alert("Selecione se foi ponto ou se falhou" );
   }else if(local==0){
-    alert("Selecione onde foi o atque" );
+    alert("Selecione onde foi o ataque" );
   }
   else {
         if(ofencivo==1){
